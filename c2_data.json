@@ -12,7 +12,7 @@
       "https://github.com/itaymigdal/Poshito"
     ],
     "detection": [
-      "Requests to https://api.telegram.org/bot*"
+      "https://api.telegram.org/bot*"
     ]
   },
   "twitter": {
@@ -22,7 +22,10 @@
       "https://github.com/woj-ciech/Social-media-c2"
     ],
     "detection": [
-      "Requests to https://api.twitter.com/1*, https://api.twitter.com/2*, https://upload.twitter.com/, https://api.twitter.com/oauth*"
+      "https://api.twitter.com/1*",
+      "https://api.twitter.com/2*",
+      "https://upload.twitter.com/",
+      "https://api.twitter.com/oauth*"
     ]
   },
   "gmail": {
@@ -34,7 +37,8 @@
       "https://github.com/shanefarris/GmailBackdoor"
     ],
     "detection": [
-      "Requests to https://www.googleapis.com/gmail/*, https://www.googleapis.com/auth/*"
+      "https://www.googleapis.com/gmail/*",
+      "https://www.googleapis.com/auth/*"
     ]
   },
   "slack": {
@@ -47,7 +51,7 @@
       "https://github.com/Yihsiwei/slack-c2-golang"
     ],
     "detection": [
-      "Requests to https://slack.com/api/*"
+      "https://slack.com/api/*"
     ]
   },
   "discord": {
@@ -65,7 +69,7 @@
       "https://github.com/Jeff53978/Python-Trojan"
     ],
     "detection": [
-      "Requests to https://discord.com/api/*"
+      "https://discord.com/api/*"
     ]
   },
   "googleSheetDrive": {
@@ -75,7 +79,8 @@
       "https://github.com/SpiderLabs/DoHC2"
     ],
     "detection": [
-      "Requests to https://sheets.googleapis.com/*, https://www.googleapis.com/drive/*"
+      "https://sheets.googleapis.com/*",
+      "https://www.googleapis.com/drive/*"
     ]
   },
   "googleCalendar": {
@@ -83,7 +88,7 @@
       "https://github.com/MrSaighnal/GCR-Google-Calendar-RAT"
     ],
     "detection": [
-      "Requests to https://www.googleapis.com/auth/calendar*"
+      "https://www.googleapis.com/auth/calendar*"
     ]
   },
   "github": {
@@ -92,7 +97,7 @@
       "https://github.com/TheD1rkMtr/GithubC2"
     ],
     "detection": [
-      "Requests to https://api.github.com/*"
+      "https://api.github.com/*"
     ]
   },
   "youtube": {
@@ -102,7 +107,7 @@
       "https://github.com/ricardojoserf/SharpCovertTube"
     ],
     "detection": [
-      "Requests to https://www.googleapis.com/youtube/*"
+      "https://www.googleapis.com/youtube/*"
     ]
   },
   "pastebin": {
@@ -120,7 +125,7 @@
       "https://github.com/thrasr/reddit-c2"
     ],
     "detection": [
-      "Requests to https://www.reddit.com/api/*"
+      "https://www.reddit.com/api/*"
     ]
   },
   "dropbox": {
@@ -136,7 +141,8 @@
       "https://github.com/woj-ciech/Social-media-c2"
     ],
     "detection": [
-      "Requests to https://api.instagram.com/oauth/*, https://graph.instagram.com/*"
+      "https://api.instagram.com/oauth/*",
+      "https://graph.instagram.com/*"
     ]
   },
   "zoom": {
@@ -155,7 +161,8 @@
       "https://github.com/samuelriesz/SharpHungarian"
     ],
     "detection": [
-      "Requests to https://www.virustotal.com/api/v3/*/comments, https://www.virustotal.com/api/v2/*/comments"
+      "https://www.virustotal.com/api/v3/*/comments",
+      "https://www.virustotal.com/api/v2/*/comments"
     ]
   },
   "zulip": {
@@ -174,7 +181,7 @@
       "https://github.com/mttaggart/OffensiveNotion"
     ],
     "detection": [
-      "Requests to https://api.notion.com*"
+      "https://api.notion.com*"
     ]
   },
   "matrix": {
@@ -182,8 +189,8 @@
       "https://github.com/n1k7l4i/goMatrixC2/"
     ],
     "detection": [
-      "POST Requests to https://matrix.org/_matrix/client/r0/rooms/*/send/m.room.message",
-      "GET Requests to https://matrix.org/_matrix/client/r0/rooms/*/messages"
+      "POST - https://matrix.org/_matrix/client/r0/rooms/*/send/m.room.message",
+      "GET - https://matrix.org/_matrix/client/r0/rooms/*/messages"
     ]
   },
   "openai": {
@@ -191,9 +198,9 @@
       "https://github.com/spartan-conseil/ratchatpt"
     ],
     "detection": [
-      "POST & GET Requests to https://api.openai.com/v1/files*",
-      "POST Requests to https://api.openai.com/v1/files/*",
-      "GET Requests to https://api.openai.com/v1/files/*/content*"
+      "POST & GET - https://api.openai.com/v1/files*",
+      "POST - https://api.openai.com/v1/files/*",
+      "GET - https://api.openai.com/v1/files/*/content*"
     ]
   }
 }
