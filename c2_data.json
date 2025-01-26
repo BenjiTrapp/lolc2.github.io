@@ -64,6 +64,15 @@
       "https://cf-media.sndcdn.com/*"
     ]
   },
+  "spotify": {
+    "c2Projects": [
+      "https://github.com/Kaiser784/SoundShell"
+    ],
+    "detection": [
+      "https://p.scdn.co/mp3-preview/",
+      "https://api.spotify.com/v1/*",
+    ]
+  },
   "Microsoft Teams": {
     "c2Projects": [
       "https://github.com/cxnturi0n/convoC2"
