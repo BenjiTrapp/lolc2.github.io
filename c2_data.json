@@ -234,7 +234,8 @@
   },
   "matrix": {
     "c2Projects": [
-      "https://github.com/n1k7l4i/goMatrixC2/"
+      "https://github.com/n1k7l4i/goMatrixC2/",
+      "https://github.com/opensesamedoors/goMatrixC2"
     ],
     "detection": [
       "POST - https://matrix.org/_matrix/client/r0/rooms/*/send/m.room.message",
