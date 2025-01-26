@@ -60,7 +60,7 @@
     ],
     "detection": [
       "[specula] - User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 10.0; WOW64; Trident/7.0; Specula; Microsoft Outlook*",
-      "[Specula] - https://github.com/mthcht/ThreatHunting-Keywords/blob/main/tools/R-T/specula.csv"
+      "[Specula] - detection patterns https://github.com/mthcht/ThreatHunting-Keywords/blob/main/tools/R-T/specula.csv"
     ]
   },
   "soundcloud": {
@@ -164,7 +164,8 @@
       "https://github.com/PeterEdtu/Pastebad-Reverse-Shell"
     ],
     "detection": [
-      "Requests to https://pastebin.com/api/api_post.php, https://pastebin.com/api/*"
+      "https://pastebin.com/api/api_post.php",
+      "https://pastebin.com/api/*"
     ]
   },
   "reddit": {
@@ -181,7 +182,7 @@
       "https://github.com/Arno0x/DBC2"
     ],
     "detection": [
-      "Requests to https://api.dropboxapi.com/*"
+      "https://api.dropboxapi.com/*"
     ]
   },
   "instagram": {
@@ -198,7 +199,7 @@
       "https://github.com/0xEr3bus/ShadowForgeC2"
     ],
     "detection": [
-      "Requests to https://api.zoom.us/v2/chat/users/me/*"
+      "https://api.zoom.us/v2/chat/users/me/*"
     ]
   },
   "virustotal": {
@@ -218,10 +219,10 @@
       "https://github.com/n1k7l4i/goZulipC2"
     ],
     "detection": [
-      "Requests to https://*.zulipchat.com/api/v1/messages*",
-      "Requests to https://*.zulipchat.com/api/v1/user_uploads*",
-      "Requests to https://*.zulipchat.com/api/v1/users/me/subscriptions*",
-      "Requests to https://*.zulipchat.com/api/v1/get_stream_id?stream=*"
+      "https://*.zulipchat.com/api/v1/messages*",
+      "https://*.zulipchat.com/api/v1/user_uploads*",
+      "https://*.zulipchat.com/api/v1/users/me/subscriptions*",
+      "https://*.zulipchat.com/api/v1/get_stream_id?stream=*"
     ]
   },
   "notion": {
