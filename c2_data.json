@@ -83,7 +83,7 @@
       "https://www.googleapis.com/drive/*"
     ]
   },
-  "googleCalendar": {
+  "google Calendar": {
     "c2Projects": [
       "https://github.com/MrSaighnal/GCR-Google-Calendar-RAT"
     ],
