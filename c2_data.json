@@ -54,7 +54,7 @@
       "https://slack.com/api/*"
     ]
   },
-  "outlook": {
+  "Microsoft outlook": {
     "c2Projects": [
       "https://github.com/trustedsec/specula"
     ],
