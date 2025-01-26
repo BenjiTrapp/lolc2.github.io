@@ -109,6 +109,14 @@
       "https://discord.com/api/*"
     ]
   },
+  "splunk": {
+    "c2Projects": [
+      "https://github.com/cnotin/SplunkWhisperer2"
+    ],
+    "detection": [
+      "Splunk endpoint artifacts only - the 'C2' will be a custom Splunk Deployment Server instance"
+    ]
+  },
   "google Sheet": {
     "c2Projects": [
       "https://github.com/looCiprian/GC2-sheet",
