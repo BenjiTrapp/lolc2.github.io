@@ -10,6 +10,39 @@
       padding: 0;
       box-sizing: border-box;
     }
+    @media only screen and (max-width: 768px) {
+    /* Make the logo smaller on mobile */
+    .github-logo {
+        width: 32px;
+        height: 32px;
+        top: 5px;
+        right: 5px;
+    }
+
+    /* Stack tiles in a single column or two columns depending on space */
+    .tile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Let the detail view use the full width and stack the sidebar below or above */
+    .detail-view {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #cfd8dc;
+        margin-bottom: 1rem;
+    }
+
+    .detail-content {
+        width: 100%;
+        padding: 1rem;
+    }
+    }
+
     /* GitHub logo style */
     .github-logo {
         position: absolute;
