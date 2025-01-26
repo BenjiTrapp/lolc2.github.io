@@ -54,6 +54,15 @@
       "https://slack.com/api/*"
     ]
   },
+  "outlook": {
+    "c2Projects": [
+      "https://github.com/trustedsec/specula"
+    ],
+    "detection": [
+      "[specula] - User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 10.0; WOW64; Trident/7.0; Specula; Microsoft Outlook*",
+      "[Specula] - https://github.com/mthcht/ThreatHunting-Keywords/blob/main/tools/R-T/specula.csv"
+    ]
+  },
   "soundcloud": {
     "c2Projects": [
       "https://github.com/reevesrs24/LivingOffAlexa"
