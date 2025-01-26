@@ -113,7 +113,7 @@
   "pastebin": {
     "c2Projects": [
       "https://github.com/3ndG4me/AgentSmith",
-      "https://github.com/PeterEdtu/Pastebad-Reverse-Shell (pastebin.fr)"
+      "https://github.com/PeterEdtu/Pastebad-Reverse-Shell"
     ],
     "detection": [
       "Requests to https://pastebin.com/api/api_post.php, https://pastebin.com/api/*"
@@ -156,7 +156,7 @@
   "virustotal": {
     "c2Projects": [
       "https://github.com/RATandC2/VirusTotalC2",
-      "https://github.com/D1rkMtr/VirusTotalC2 (the repo does not exist anymore and the github username changed from D1rkMtr to TheD1rkMtr)",
+      "https://github.com/D1rkMtr/VirusTotalC2",
       "https://github.com/g0h4n/REC2",
       "https://github.com/samuelriesz/SharpHungarian"
     ],
