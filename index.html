@@ -258,16 +258,21 @@
     "Microsoft Teams": 'https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg'
   };
 
-  // Fetch JSON
-  fetch('c2_data.json')
-    .then(response => response.json())
-    .then(data => {
-      c2Data = data;
-      createTiles(Object.keys(data));
-    })
-    .catch(error => {
-      console.error('Error loading c2_data.json:', error);
-    });
+
+    // Fetch JSON with cache-busting query parameter
+  function loadC2Data() {
+    const jsonUrl = `c2_data.json?t=${new Date().getTime()}`; // Appending timestamp
+    fetch(jsonUrl, { cache: "no-store" })
+      .then(response => response.json())
+      .then(data => {
+        c2Data = data;
+        createTiles(Object.keys(data));
+      })
+      .catch(error => {
+        console.error('Error loading c2_data.json:', error);
+      });
+  }
+
 
   // Create a tile for each service
   function createTiles(services) {
@@ -349,6 +354,9 @@
     document.getElementById('tileGrid').style.display = 'grid';
     document.getElementById('detailView').style.display = 'none';
   }
+
+  // Load the C2 data when the page is loaded
+  loadC2Data();
 </script>
 
 </body>
