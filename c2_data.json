@@ -70,7 +70,7 @@
     ],
     "detection": [
       "https://p.scdn.co/mp3-preview/",
-      "https://api.spotify.com/v1/*",
+      "https://api.spotify.com/v1/*"
     ]
   },
   "Microsoft Teams": {
