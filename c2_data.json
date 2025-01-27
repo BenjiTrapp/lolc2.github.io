@@ -150,7 +150,9 @@
   "github": {
     "c2Projects": [
       "https://github.com/3ct0s/disctopia-c2",
-      "https://github.com/TheD1rkMtr/GithubC2"
+      "https://github.com/TheD1rkMtr/GithubC2",
+
+"https://github.com/offalltn/gitC2"
     ],
     "detection": [
       "https://api.github.com/*"
