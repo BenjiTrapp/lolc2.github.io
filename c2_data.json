@@ -117,6 +117,17 @@
       "Splunk endpoint artifacts only - the 'C2' will be a custom Splunk Deployment Server instance"
     ]
   },
+  "lichess": {
+    "c2Projects": [
+      "https://github.com/0x-Apollyon/Malnus-Carlware"
+    ],
+    "detection": [
+      "POST - https://lichess.org/api/bot/game/*/move/*",
+      "POST - https://lichess.org/api/challenge/*",
+      "GET - https://lichess.org/api/stream/event",
+      "GET - https://lichess.org/api/bot/game/stream/"
+    ]
+  },
   "google Sheet": {
     "c2Projects": [
       "https://github.com/looCiprian/GC2-sheet",
