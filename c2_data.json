@@ -48,10 +48,12 @@
       "https://github.com/praetorian-inc/slack-c2bot",
       "https://github.com/j3ssie/c2s",
       "https://github.com/herwonowr/slackhell",
-      "https://github.com/Yihsiwei/slack-c2-golang"
+      "https://github.com/Yihsiwei/slack-c2-golang",
+      "https://github.com/MythicC2Profiles/slack"
     ],
     "detection": [
-      "https://slack.com/api/*"
+      "https://slack.com/api/*",
+      "https://api.slack.com/apps/*"
     ]
   },
   "Microsoft outlook": {
@@ -162,6 +164,7 @@
     "c2Projects": [
       "https://github.com/3ct0s/disctopia-c2",
       "https://github.com/TheD1rkMtr/GithubC2",
+      "https://github.com/MythicC2Profiles/github"
 "https://github.com/offalltn/gitC2"
     ],
     "detection": [
