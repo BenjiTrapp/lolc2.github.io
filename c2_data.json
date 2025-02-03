@@ -21,7 +21,8 @@
     ],
     "detection": [
       "https://app.asana.com/api/1.0/projects/*",
-      "https://app.asana.com/api/1.0/tasks/*"
+      "https://app.asana.com/api/1.0/tasks/*",
+      "https://app.asana.com/api/1.0/attachments/*"
     ]
   },
   "twitter": {
