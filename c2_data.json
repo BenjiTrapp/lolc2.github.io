@@ -15,6 +15,15 @@
       "https://api.telegram.org/bot*"
     ]
   },
+  "asana":  {
+    "c2Projects": [
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/AsanaApi/AsanaApi.cpp"
+    ],
+    "detection": [
+      "https://app.asana.com/api/1.0/projects/*",
+      "https://app.asana.com/api/1.0/tasks/*"
+    ]
+  },
   "twitter": {
     "c2Projects": [
       "https://github.com/slaeryan/LARRYCHATTER",
