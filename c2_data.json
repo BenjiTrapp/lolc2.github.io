@@ -107,6 +107,18 @@
       "https://slack.com/api/files.upload?*&channels=*&thread_ts=*"
     ]
   },
+  "cisco webex": {
+    "c2Projects": [
+      "https://github.com/WithSecureLabs/C3/compare/master...tvgdb:C3:cisco-webex-teams-channel"
+    ],
+    "detection": [
+      "https://*/v1/access_token",
+      "https://*/v1/messages",
+      "https://*/v1/messages?max=*&roomId=*",
+      "https://*/v1/messages/*",
+      "https://*/v1/rooms"
+    ]
+  },
   "Microsoft outlook": {
     "c2Projects": [
       "https://github.com/trustedsec/specula"
