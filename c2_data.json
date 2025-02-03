@@ -25,6 +25,37 @@
       "https://app.asana.com/api/1.0/attachments/*"
     ]
   },
+  "onedrive":  {
+    "c2Projects": [
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/OneDrive365RestFile.cpp"
+    ],
+    "detection": [
+      "https://graph.microsoft.com/v1.0/me/drive/root:/*",
+      "https://graph.microsoft.com/v1.0/me/drive/items/*",
+      "https://graph.microsoft.com/v1.0/me/drive/root/children",
+      "https://login.windows.net/organizations/oauth2/v2.0/token"
+    ]
+  },
+  "Microsoft Tasks":  {
+    "c2Projects": [
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/Outlook365RestTask.cpp"
+    ],
+    "detection": [
+      "https://outlook.office.com/api/v2.0/me/tasks/*",
+      "https://outlook.office.com/api/v2.0/me/tasks",
+      "https://login.windows.net/organizations/oauth2/v2.0/token/*"
+    ]
+  },
+  "jira":  {
+    "c2Projects": [
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/Atlassian/JiraApi.cpp"
+    ],
+    "detection": [
+      "https://*.atlassian.net/rest/api/2/issue/*",
+      "https://*.atlassian.net/rest/api/2/search?jql=project=*",
+      "https://*.atlassian.net/rest/api/2/attachment/*"
+    ]
+  },
   "twitter": {
     "c2Projects": [
       "https://github.com/slaeryan/LARRYCHATTER",
@@ -105,7 +136,7 @@
   },
   "discord": {
     "c2Projects": [
-      "https://github.com/MythicC2Profiles/discord",
+      "https://github.com/MythicC2Profiles/discord",  
       "https://github.com/3ct0s/disctopia-c2",
       "https://github.com/emmaunel/DiscordGo",
       "https://github.com/crawl3r/DaaC2",
@@ -115,10 +146,13 @@
       "https://github.com/Vczz0/Cerberos-C2",
       "https://github.com/3NailsInfoSec/DCVC2",
       "https://github.com/hoaan1995/ZER0BOT",
-      "https://github.com/Jeff53978/Python-Trojan"
+      "https://github.com/Jeff53978/Python-Trojan",
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/Discord/DiscordApi.cpp"
     ],
     "detection": [
-      "https://discord.com/api/*"
+      "https://discord.com/api/*",
+      "https://discord.com/api/v9/channels/*",
+      "https://discord.com/api/v9/guilds/*"
     ]
   },
   "splunk": {
@@ -140,6 +174,24 @@
       "GET - https://lichess.org/api/bot/game/stream/"
     ]
   },
+  "mattermost": {
+    "c2Projects": [
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/Mattermost/MattermostApi.cpp"
+    ],
+    "detection": [
+      "*/api/v4/users/*",
+      "*/api/v4/users/username/*",
+      "*/api/v4/posts/*",
+      "*/api/v4/channels",
+      "*/api/v4/teams?page=*&per_page=30&include_total_count=true",
+      "*/api/v4/channels?exclude_default_channels=true",
+      "*/api/v4/teams/name/*/channels/name/*",
+      "*/api/v4/posts/*/thread",
+      "*/api/v4/channels/*/posts?per_page=200&page=*",
+      "*/api/v4/posts/*/patch",
+      "*/api/v4/files/*/link"
+    ]
+  },
   "google Sheet": {
     "c2Projects": [
       "https://github.com/looCiprian/GC2-sheet",
@@ -153,13 +205,19 @@
   "google Drive": {
     "c2Projects": [
       "https://github.com/lukebaggett/google_socks",
-      "https://github.com/DannyPenten/Rust-DriveC2"
+      "https://github.com/DannyPenten/Rust-DriveC2",
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/GoogleDrive.cpp"
     ],
     "detection": [
       "https://www.googleapis.com/drive/*",
       "POST - https://www.googleapis.com/upload/drive/v3/files?*",
       "GET - https://www.googleapis.com/drive/v3/files/*",
-      "https://www.googleapis.com/auth/drive"
+      "https://www.googleapis.com/auth/drive",
+      "https://oauth2.googleapis.com/token",
+      "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart"
+      "https://www.googleapis.com/drive/v3/files?q=mimeType%20%3D%20%27application%2Fvnd.google-apps.folder%27*",
+      "https://www.googleapis.com/drive/v3/files?q=mimeType%20=%20%27application/octet-stream%27%20and%20name%20contains%20%27*",
+      "https://www.googleapis.com/drive/v3/files/*"
     ]
   },  
   "google Calendar": {
@@ -212,10 +270,16 @@
   },
   "dropbox": {
     "c2Projects": [
-      "https://github.com/Arno0x/DBC2"
+      "https://github.com/Arno0x/DBC2",
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/Dropbox.cpp"
     ],
     "detection": [
-      "https://api.dropboxapi.com/*"
+      "https://api.dropboxapi.com/*",
+      "https://api.dropboxapi.com/2/files/list_folder",
+      "https://api.dropboxapi.com/2/files/create_folder_v2",
+      "https://api.dropboxapi.com/2/files/search_v2",
+      "https://api.dropboxapi.com/2/files/search/continue_v2",
+      "https://content.dropboxapi.com/2/files/download"
     ]
   },
   "instagram": {
