@@ -214,7 +214,7 @@
       "GET - https://www.googleapis.com/drive/v3/files/*",
       "https://www.googleapis.com/auth/drive",
       "https://oauth2.googleapis.com/token",
-      "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart"
+      "https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart",
       "https://www.googleapis.com/drive/v3/files?q=mimeType%20%3D%20%27application%2Fvnd.google-apps.folder%27*",
       "https://www.googleapis.com/drive/v3/files?q=mimeType%20=%20%27application/octet-stream%27%20and%20name%20contains%20%27*",
       "https://www.googleapis.com/drive/v3/files/*"
