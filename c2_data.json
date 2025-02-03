@@ -90,11 +90,21 @@
       "https://github.com/j3ssie/c2s",
       "https://github.com/herwonowr/slackhell",
       "https://github.com/Yihsiwei/slack-c2-golang",
-      "https://github.com/MythicC2Profiles/slack"
+      "https://github.com/MythicC2Profiles/slack",
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/Slack.cpp"
     ],
     "detection": [
       "https://slack.com/api/*",
-      "https://api.slack.com/apps/*"
+      "https://api.slack.com/apps/*",
+      "https://slack.com/api/chat.postMessage",
+      "https://slack.com/api/conversations.list?exclude_archived=true",
+      "https://slack.com/api/conversations.create",
+      "https://slack.com/api/conversations.replies?channel=*",
+      "https://slack.com/api/conversations.history?limit=200&channel=*",
+      "https://slack.com/api/chat.update",
+      "https://slack.com/api/chat.postMessage",
+      "https://slack.com/api/chat.delete",
+      "https://slack.com/api/files.upload?*&channels=*&thread_ts=*"
     ]
   },
   "Microsoft outlook": {
