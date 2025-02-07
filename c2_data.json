@@ -121,11 +121,18 @@
   },
   "Microsoft outlook": {
     "c2Projects": [
-      "https://github.com/trustedsec/specula"
+      "https://github.com/trustedsec/specula",
+      "https://github.com/boku7/azureOutlookC2"
     ],
     "detection": [
       "[specula] - User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 10.0; WOW64; Trident/7.0; Specula; Microsoft Outlook*",
-      "[Specula] - detection patterns https://github.com/mthcht/ThreatHunting-Keywords/blob/main/tools/R-T/specula.csv"
+      "[Specula] - detection patterns https://github.com/mthcht/ThreatHunting-Keywords/blob/main/tools/R-T/specula.csv",
+      "[azureOutlookC2] url: https://login.microsoftonline.com/*/oauth2/token?api-version=1.0",
+      "[azureOutlookC2] url: https://graph.microsoft.com/v1.0/me/MailFolders/drafts/messages",
+      "[azureOutlookC2] url: https://graph.microsoft.com/v1.0/me/messages",
+      "[azureOutlookC2] email recipient: Bobby.Cooke@0xBoku.com",
+      "[azureOutlookC2] email subject: 'Azure Outlook Command & Control'",
+      "[azureOutlookC2] User-Agent: 'Mozilla'"
     ]
   },
   "soundcloud": {
