@@ -228,14 +228,29 @@
     ],
     "detection": [
       "https://sheets.googleapis.com/*",
-      "https://www.googleapis.com/drive/*"
+      "https://www.googleapis.com/drive/*",
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/spreadsheets.readonly",
+      "https://sheets.googleapis.com/v4/spreadsheets/*:batchUpdate",
+      "https://sheets.googleapis.com/v4/spreadsheets/*/values/*?valueInputOption=RAW",
+      "https://sheets.googleapis.com/v4/spreadsheets/*/values:batchGet?*&ranges=*"
+    ]
+  },
+  "Microsoft Sharepoint": {
+    "c2Projects": [
+      "https://github.com/looCiprian/GC2-sheet"
+    ],
+    "detection": [
+      "https://graph.microsoft.com/v1.0/sites/*/lists/*/items/",
+      "https://graph.microsoft.com/v1.0/sites/*/lists/*"
     ]
   },
   "google Drive": {
     "c2Projects": [
       "https://github.com/lukebaggett/google_socks",
       "https://github.com/DannyPenten/Rust-DriveC2",
-      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/GoogleDrive.cpp"
+      "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/GoogleDrive.cpp",
+      "https://github.com/looCiprian/GC2-sheet"
     ],
     "detection": [
       "https://www.googleapis.com/drive/*",
