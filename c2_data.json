@@ -135,6 +135,19 @@
       "[azureOutlookC2] User-Agent: 'Mozilla'"
     ]
   },
+  "Microsoft Azure Functions": {
+    "c2Projects": [
+      "https://github.com/RedSiege/FunctionalC2",
+      "FunctionalC2 blog: https://web.archive.org/web/20241203083420/https://fortynorthsecurity.com/blog/azure-functions-functional-redirection/"
+    ],
+    "detection": [
+      "Before forwarding: only https://*.azurewebsites.net/api/*",
+      "POST - */FortyNorth/PostIt",
+      "GET - */FortyNorth/GetIt",
+      "*/FortyNorth/StageIt",
+      "User-Agent: Microsoft-CryptoAPI/6.1"
+    ]
+  },
   "soundcloud": {
     "c2Projects": [
       "https://github.com/reevesrs24/LivingOffAlexa"
