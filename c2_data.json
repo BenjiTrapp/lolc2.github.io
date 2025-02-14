@@ -138,7 +138,7 @@
   "Microsoft Azure Functions": {
     "c2Projects": [
       "https://github.com/RedSiege/FunctionalC2",
-      "FunctionalC2 blog: https://web.archive.org/web/20241203083420/https://fortynorthsecurity.com/blog/azure-functions-functional-redirection/"
+      "https://web.archive.org/web/20241203083420/https://fortynorthsecurity.com/blog/azure-functions-functional-redirection/"
     ],
     "detection": [
       "Before forwarding: only https://*.azurewebsites.net/api/*",
