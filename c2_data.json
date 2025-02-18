@@ -136,7 +136,7 @@
       "url: https://proxy.duckduckgo.com/iu/?u=",
       "url: https://*.pythonanywhere.com/image.jpg?cmd=*"
     ]
-  }
+  },
   "Microsoft outlook": {
     "c2Projects": [
       "https://github.com/trustedsec/specula",
