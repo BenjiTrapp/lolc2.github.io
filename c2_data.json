@@ -23,7 +23,7 @@
       "Unusual outbound UDP traffic on port 27015",
       "Source RCON protocol documentation: https://developer.valvesoftware.com/wiki/Source_RCON_Protocol"
     ]
-  }
+  },
   "asana":  {
     "c2Projects": [
       "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/AsanaApi/AsanaApi.cpp"
