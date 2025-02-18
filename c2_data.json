@@ -136,7 +136,7 @@
     ]
   },
   "Microsoft Power Automate": {
-    "c2projects": [
+    "c2Projects": [
       "https://github.com/NTT-Security-Japan/pac2"
     ],
     "detection": [
