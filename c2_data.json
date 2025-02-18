@@ -135,6 +135,41 @@
       "[azureOutlookC2] User-Agent: 'Mozilla'"
     ]
   },
+  "Microsoft Power Automate": {
+    "c2projects": [
+      "https://github.com/NTT-Security-Japan/pac2"
+    ],
+    "detection": [
+      "url: https://graph.microsoft.com/v1.0/*metadata#teams*",
+      "url: https://graph.microsoft.com/v1.0/*metadata#chats*/members",
+      "url: https://graph.microsoft.com/beta/*metadata#chats",
+      "url: https://graph.microsoft.com/beta/*metadata#teams*/channels*/messages",
+      "url: http://dummy.pac2.localhost:9999",
+      "url: http://localhost:9999/login",
+      "url: http://localhost:9999/register",
+      "url: http://localhost:9999/portal",
+      "url: https://www.dropbox.com/cli_link_nonce?nonce=f*",
+      "url: https://content.dropboxapi.com/2/files/upload",
+      "url: https://api.dropboxapi.com/2/files/download",
+      "url: */providers/Microsoft.PowerApps/apis/shared_flowmanagement",
+      "url: */providers/Microsoft.PowerApps/apis/shared_dropbox",
+      "url: */providers/Microsoft.PowerApps/apis/*",
+      "url: *pac2/*/upload/connections.json",
+      "url: *pac2/*/payload",
+      "url: https://make.powerautomate.com",
+      "url: */portal/client/payload",
+      "url: */api/teams/messages?channel_id=*",
+      "url: */portal/teams?client_id=*",
+      "url: */api/teams/chats",
+      "url: */api/teams/channels",
+      "url: */api/teams/messages",
+      "url: */api/teams/graph",
+      "url: */teams/chat_members",
+      "User-Agent: azure-logic-apps/1.0",
+      "file: */mount/dropbox/Dropbox/pac2",
+      "file: /c2_access.log"
+    ]
+  },
   "Microsoft Azure Functions": {
     "c2Projects": [
       "https://github.com/RedSiege/FunctionalC2",
@@ -169,7 +204,8 @@
   },
   "Microsoft Teams": {
     "c2Projects": [
-      "https://github.com/cxnturi0n/convoC2"
+      "https://github.com/cxnturi0n/convoC2",
+      "https://github.com/NTT-Security-Japan/pac2"
     ],
     "detection": [
       "https://teams.microsoft.com/api/chatsvc/*/v1/threads",
@@ -329,6 +365,7 @@
   "dropbox": {
     "c2Projects": [
       "https://github.com/Arno0x/DBC2",
+      "https://github.com/NTT-Security-Japan/pac2",
       "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/Dropbox.cpp"
     ],
     "detection": [
