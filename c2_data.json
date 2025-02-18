@@ -20,7 +20,8 @@
       "https://github.com/eversinc33/1.6-C2"
     ],
     "detection": [
-      "Unusual outbound UDP traffic on port 27015"
+      "Unusual outbound UDP traffic on port 27015",
+      "Source RCON protocol documentation: https://developer.valvesoftware.com/wiki/Source_RCON_Protocol"
     ]
   }
   "asana":  {
