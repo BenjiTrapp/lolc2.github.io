@@ -12,55 +12,45 @@
       box-sizing: border-box;
     }
     @media only screen and (max-width: 768px) {
-    /* Make the logo smaller on mobile */
-    .github-logo {
+      .github-logo {
         width: 32px;
         height: 32px;
         top: 5px;
         right: 5px;
-    }
-
-    /* Stack tiles in a single column or two columns depending on space */
-    .tile-grid {
+      }
+      .tile-grid {
         grid-template-columns: 1fr;
-    }
-
-    /* Let the detail view use the full width and stack the sidebar below or above */
-    .detail-view {
+      }
+      .detail-view {
         flex-direction: column;
         height: auto;
-    }
-
-    .sidebar {
+      }
+      .sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid #cfd8dc;
         margin-bottom: 1rem;
-    }
-
-    .detail-content {
+      }
+      .detail-content {
         width: 100%;
         padding: 1rem;
+      }
     }
-    }
-
-    /* GitHub logo style */
     .github-logo {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 64px;
-        height: 64px;
-        background-color: #3f535c; /* Add background color */
-        border-radius: 50%; /* Make it circular */
-        padding: 4px; /* Add padding to create a border effect */
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 64px;
+      height: 64px;
+      background-color: #3f535c;
+      border-radius: 50%;
+      padding: 4px;
     }
     body {
       font-family: "Segoe UI", Tahoma, sans-serif;
       background: #f3f4f6;
       color: #37474f;
     }
-
     header {
       background: linear-gradient(to right, #263238, #455a64);
       padding: 1rem;
@@ -71,21 +61,16 @@
       font-size: 1.6rem;
       font-weight: 500;
     }
-
     .main-container {
       max-width: 1200px;
       margin: 1rem auto;
       padding: 0 1rem;
     }
-
-    /* 1) Tile Grid: shown by default */
     .tile-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
       grid-gap: 1rem;
     }
-
-    /* Each tile: bigger, with an image up top, text below */
     .tile {
       background: #fff;
       border-radius: 8px;
@@ -104,34 +89,27 @@
       transform: translateY(-2px);
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
-    /* Tile image styling */
     .tile img {
       width: 60px;
       height: 60px;
       object-fit: contain;
       margin-bottom: 0.5rem;
     }
-    /* Tile text (service name) */
     .tile-text {
       font-size: 1rem;
       font-weight: 500;
       text-transform: capitalize;
       color: #37474f;
     }
-
-    /* 2) Detail View: hidden by default */
     .detail-view {
-      display: none; /* Only show after a tile click via JS */
+      display: none;
       background: #fff;
       box-shadow: 0 1px 5px rgba(0,0,0,0.15);
       border-radius: 8px;
-      height: 600px; /* fixed height or as desired */
+      height: 600px;
       overflow: hidden;
-      /* Was 'display: flex;' here, removed to avoid conflict */
       margin-top: 1rem;
     }
-
-    /* Sidebar with "Go Back" button */
     .sidebar {
       background: #f7f7f7;
       width: 200px;
@@ -155,8 +133,6 @@
     .sidebar button:hover {
       background: #455a64;
     }
-
-    /* Detail content area */
     .detail-content {
       flex: 1;
       padding: 1rem 1.5rem;
@@ -189,16 +165,16 @@
       text-decoration: underline;
     }
     @media (max-width: 768px) {
-    .github-logo {
+      .github-logo {
         width: 24px;
         height: 24px;
-    }
-    /* Footer */
-    .footer-note {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #757575;
-      padding: 1rem;
+      }
+      .footer-note {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #757575;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -206,21 +182,16 @@
 
 <header>
   <img src="lolc2.png" alt="LOLC2 Logo" width="128" height="128">
-  <h1>LOLC2</h4>
+  <h1>LOLC2</h1>
   <h4>collection of C2 frameworks that leverage legitimate services to evade detection</h4>
 </header>
 
-<body>
-  <a href="https://github.com/lolc2/lolc2.github.io" target="_blank">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="github-logo">
-  </a>
-
+<a href="https://github.com/lolc2/lolc2.github.io" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="github-logo">
+</a>
 
 <div class="main-container">
-  <!-- Tile Grid (visible initially) -->
   <div class="tile-grid" id="tileGrid"></div>
-
-  <!-- Detail View (hidden initially) -->
   <div class="detail-view" id="detailView">
     <div class="sidebar">
       <button onclick="goBack()">Go Back</button>
@@ -229,9 +200,14 @@
   </div>
 </div>
 
+<!-- Marked.js for Markdown parsing -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 <script>
   let c2Data = {};
 
+  // Optional icons
+ 
   // Optional placeholder icons.
   const serviceIcons = {
     telegram:                   'https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg',
@@ -251,6 +227,7 @@
     zoom:                       'https://upload.wikimedia.org/wikipedia/commons/2/24/Zoom-Logo.png',
     virustotal:                 'https://avatars.githubusercontent.com/u/7701252',
     zulip:                      'https://upload.wikimedia.org/wikipedia/commons/3/39/Zulip-icon-square.svg',
+    mastodon:                   'https://upload.wikimedia.org/wikipedia/commons/d/d5/Mastodon_logotype_%28simple%29_new_hue.svg',
     notion:                     'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png',
     matrix:                     'https://upload.wikimedia.org/wikipedia/commons/7/7c/Matrix_icon.svg',
     openai:                     'https://upload.wikimedia.org/wikipedia/commons/a/a4/GPT-4.png',
@@ -274,9 +251,9 @@
   };
 
 
-    // Fetch JSON with cache-busting query parameter
+  // Fetch JSON
   function loadC2Data() {
-    const jsonUrl = `c2_data.json?t=${new Date().getTime()}`; // Appending timestamp
+    const jsonUrl = `c2_data.json?t=${new Date().getTime()}`;
     fetch(jsonUrl, { cache: "no-store" })
       .then(response => response.json())
       .then(data => {
@@ -288,52 +265,43 @@
       });
   }
 
-
-  // Create a tile for each service
   function createTiles(services) {
     const tileGrid = document.getElementById('tileGrid');
     services.forEach(service => {
       const tile = document.createElement('div');
       tile.className = 'tile';
 
-      // Add an img element
       const img = document.createElement('img');
-      img.src = serviceIcons[service] || 'https://via.placeholder.com/60?text=icon';
+      img.src = serviceIcons[service];
       img.alt = service;
       tile.appendChild(img);
 
-      // Add text
       const title = document.createElement('div');
       title.className = 'tile-text';
       title.textContent = service;
       tile.appendChild(title);
 
-      // On click, show detail view
       tile.addEventListener('click', () => showDetail(service));
       tileGrid.appendChild(tile);
     });
   }
 
-  // Show detail view for a single service
-  function showDetail(serviceName) {
+  async function showDetail(serviceName) {
     const tileGrid = document.getElementById('tileGrid');
     const detailView = document.getElementById('detailView');
     const detailContent = document.getElementById('detailContent');
 
-    // Hide the tile grid, then show detail view
     tileGrid.style.display = 'none';
     detailView.style.display = 'flex';
-
-    // Clear old content
     detailContent.innerHTML = '';
 
     const info = c2Data[serviceName];
     if (!info) return;
 
-    // Title
     const titleEl = document.createElement('h2');
     titleEl.textContent = serviceName;
     detailContent.appendChild(titleEl);
+
 
     // C2 Projects
     const c2Label = document.createElement('div');
@@ -362,17 +330,45 @@
       detectList.appendChild(li);
     });
     detailContent.appendChild(detectList);
+
+    // 1) If there's a descriptionUrl, fetch it from doc/<service>.md
+    if (info.descriptionUrl) {
+        try {
+            const mdResponse = await fetch(info.descriptionUrl);
+            if (!mdResponse.ok) throw new Error(`Failed to fetch ${info.descriptionUrl}`);
+            const mdText = await mdResponse.text();
+            const descHtml = marked.parse(mdText);
+            
+            // Add a line break
+            detailContent.appendChild(document.createElement('br'));
+
+            const descContainer = document.createElement('div');
+            descContainer.innerHTML = descHtml;
+            detailContent.appendChild(descContainer);
+        } catch (err) {
+            console.error(err);
+        }
+    }
+    // 2) Else if there's an inline description in JSON
+    else if (info.description) {
+        // Add a line break
+        detailContent.appendChild(document.createElement('br'));
+
+        const descHtml = marked.parse(info.description);
+        const descContainer = document.createElement('div');
+        descContainer.innerHTML = descHtml;
+        detailContent.appendChild(descContainer);
+    }
+
+
   }
 
-  // Return to the tile grid
   function goBack() {
     document.getElementById('tileGrid').style.display = 'grid';
     document.getElementById('detailView').style.display = 'none';
   }
 
-  // Load the C2 data when the page is loaded
   loadC2Data();
 </script>
-
 </body>
 </html>
