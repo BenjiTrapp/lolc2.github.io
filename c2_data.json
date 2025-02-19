@@ -29,7 +29,7 @@
     "mastodon": {
       "descriptionUrl": "doc/mastodon.md",
       "c2Projects": [
--       "https://github.com/g0h4n/REC2"
+        "https://github.com/g0h4n/REC2"
       ],
       "detection": [
          "GET url: https://mastodon.be/username_fzihfzuhfuoz/109743339821428173",
