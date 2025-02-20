@@ -52,13 +52,16 @@
     "onedrive": {
       "descriptionUrl": "doc/onedrive.md",
         "c2Projects": [
-        "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/OneDrive365RestFile.cpp"
+        "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/OneDrive365RestFile.cpp",
+        "https://github.com/BC-SECURITY/Empire/blob/main/empire/server/listeners/onedrive.py"
       ],
       "detection": [
         "url: https://graph.microsoft.com/v1.0/me/drive/root:/*",
         "url: https://graph.microsoft.com/v1.0/me/drive/items/*",
         "url: https://graph.microsoft.com/v1.0/me/drive/root/children",
-        "url: https://login.windows.net/organizations/oauth2/v2.0/token"
+        "url: https://api.onedrive.com/v1.0/shares/*/driveitem/content",
+        "url: https://login.windows.net/organizations/oauth2/v2.0/token",
+        "[empire] User-agent: Microsoft SkyDriveSync 17.005.0107.0008 ship; Windows NT 10.0 (16299)"
       ]
     },
     "Microsoft Tasks": {
@@ -189,30 +192,29 @@
         "url: https://graph.microsoft.com/v1.0/*metadata#chats*/members",
         "url: https://graph.microsoft.com/beta/*metadata#chats",
         "url: https://graph.microsoft.com/beta/*metadata#teams*/channels*/messages",
-        "url: http://dummy.pac2.localhost:9999",
-        "url: http://localhost:9999/login",
-        "url: http://localhost:9999/register",
-        "url: http://localhost:9999/portal",
         "url: https://www.dropbox.com/cli_link_nonce?nonce=f*",
         "url: https://content.dropboxapi.com/2/files/upload",
         "url: https://api.dropboxapi.com/2/files/download",
-        "url: */providers/Microsoft.PowerApps/apis/shared_flowmanagement",
-        "url: */providers/Microsoft.PowerApps/apis/shared_dropbox",
-        "url: */providers/Microsoft.PowerApps/apis/*",
-        "url: *pac2/*/upload/connections.json",
-        "url: *pac2/*/payload",
-        "url: https://make.powerautomate.com",
-        "url: */portal/client/payload",
-        "url: */api/teams/messages?channel_id=*",
-        "url: */portal/teams?client_id=*",
-        "url: */api/teams/chats",
-        "url: */api/teams/channels",
-        "url: */api/teams/messages",
-        "url: */api/teams/graph",
-        "url: */teams/chat_members",
-        "User-Agent: azure-logic-apps/1.0",
-        "file: */mount/dropbox/Dropbox/pac2",
-        "file: /c2_access.log"
+        "[pac2] url: http://dummy.pac2.localhost:9999",
+        "[pac2] url: http://localhost:9999/login",
+        "[pac2] url: http://localhost:9999/register",
+        "[pac2] url: http://localhost:9999/portal",
+        "[pac2] url: */providers/Microsoft.PowerApps/apis/shared_flowmanagement",
+        "[pac2] url: */providers/Microsoft.PowerApps/apis/shared_dropbox",
+        "[pac2] url: *pac2/*/upload/connections.json",
+        "[pac2] url: *pac2/*/payload",
+        "[pac2] url: https://make.powerautomate.com",
+        "[pac2] url: */portal/client/payload",
+        "[pac2] url: */api/teams/messages?channel_id=*",
+        "[pac2] url: */portal/teams?client_id=*",
+        "[pac2] url: */api/teams/chats",
+        "[pac2] url: */api/teams/channels",
+        "[pac2] url: */api/teams/messages",
+        "[pac2] url: */api/teams/graph",
+        "[pac2] url: */teams/chat_members",
+        "[pac2] User-Agent: azure-logic-apps/1.0",
+        "[pac2] file: */mount/dropbox/Dropbox/pac2",
+        "[pac2] file: /c2_access.log"
       ]
     },
     "Microsoft Azure Functions": {
@@ -438,7 +440,8 @@
       "c2Projects": [
         "https://github.com/Arno0x/DBC2",
         "https://github.com/NTT-Security-Japan/pac2",
-        "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/Dropbox.cpp"
+        "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/Dropbox.cpp",
+        "https://github.com/BC-SECURITY/Empire/blob/main/empire/server/listeners/dbx.py"
       ],
       "detection": [
         "url: https://api.dropboxapi.com/*",
@@ -446,7 +449,8 @@
         "url: https://api.dropboxapi.com/2/files/create_folder_v2",
         "url: https://api.dropboxapi.com/2/files/search_v2",
         "url: https://api.dropboxapi.com/2/files/search/continue_v2",
-        "url: https://content.dropboxapi.com/2/files/download"
+        "url: https://content.dropboxapi.com/2/files/download",
+        "[empire] User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
       ]
     },
     "instagram": {
