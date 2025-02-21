@@ -525,6 +525,7 @@
       "detection": [
         "POST & GET - url: https://api.openai.com/v1/files*",
         "POST - url: https://api.openai.com/v1/files/*",
+        "POST - url: *files.oaiusercontent.com*",
         "GET - url: https://api.openai.com/v1/files/*/content*"
       ]
     }
