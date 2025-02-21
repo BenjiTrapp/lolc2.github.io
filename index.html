@@ -137,6 +137,7 @@
       flex: 1;
       padding: 1rem 1.5rem;
       overflow-y: auto;
+      white-space: pre-wrap; /* Ensures Markdown line breaks are preserved */
     }
     .detail-content h2 {
       font-size: 1.3rem;
@@ -207,8 +208,6 @@
   let c2Data = {};
 
   // Optional icons
- 
-  // Optional placeholder icons.
   const serviceIcons = {
     telegram:                   'https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg',
     twitter:                    'https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg',
@@ -250,7 +249,6 @@
     "DuckDuckGO":               'https://upload.wikimedia.org/wikipedia/en/8/88/DuckDuckGo_logo.svg',
     "CounterStrike 1.6":        'https://upload.wikimedia.org/wikipedia/pt/6/67/Counter-Strike_Box.jpg'
   };
-
 
   // Fetch JSON
   function loadC2Data() {
@@ -303,7 +301,6 @@
     titleEl.textContent = serviceName;
     detailContent.appendChild(titleEl);
 
-
     // C2 Projects
     const c2Label = document.createElement('div');
     c2Label.className = 'label';
@@ -344,6 +341,7 @@
             detailContent.appendChild(document.createElement('br'));
 
             const descContainer = document.createElement('div');
+            descContainer.style.whiteSpace = "pre-wrap"; // Ensures Markdown formatting is preserved
             descContainer.innerHTML = descHtml;
             detailContent.appendChild(descContainer);
         } catch (err) {
@@ -357,11 +355,10 @@
 
         const descHtml = marked.parse(info.description);
         const descContainer = document.createElement('div');
+        descContainer.style.whiteSpace = "pre-wrap";
         descContainer.innerHTML = descHtml;
         detailContent.appendChild(descContainer);
     }
-
-
   }
 
   function goBack() {
@@ -370,6 +367,12 @@
   }
 
   loadC2Data();
+  
+  // Set marked options to preserve line breaks
+  marked.setOptions({
+    gfm: true,
+    breaks: true
+  });
 </script>
 </body>
 </html>
