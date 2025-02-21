@@ -53,15 +53,20 @@
       "descriptionUrl": "doc/onedrive.md",
         "c2Projects": [
         "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/OneDrive365RestFile.cpp",
-        "https://github.com/BC-SECURITY/Empire/blob/main/empire/server/listeners/onedrive.py"
+        "https://github.com/BC-SECURITY/Empire/blob/main/empire/server/listeners/onedrive.py",
+        "https://github.com/grantok/Excel-C2",
+        "https://github.com/RedSiege/GraphStrike"
       ],
       "detection": [
         "url: https://graph.microsoft.com/v1.0/me/drive/root:/*",
+        "url: https://graph.microsoft.com/v1.0/users/*/drive/root:/*",
         "url: https://graph.microsoft.com/v1.0/me/drive/items/*",
+        "url: https://graph.microsoft.com/v1.0/sites/*/drives",
         "url: https://graph.microsoft.com/v1.0/me/drive/root/children",
         "url: https://api.onedrive.com/v1.0/shares/*/driveitem/content",
         "url: https://login.windows.net/organizations/oauth2/v2.0/token",
-        "[empire] User-agent: Microsoft SkyDriveSync 17.005.0107.0008 ship; Windows NT 10.0 (16299)"
+        "[empire] User-agent: Microsoft SkyDriveSync 17.005.0107.0008 ship; Windows NT 10.0 (16299)",
+        "[Excel-C2] User-agent: GoLang Client"
       ]
     },
     "Microsoft Tasks": {
@@ -163,6 +168,39 @@
       "detection": [
         "url: https://proxy.duckduckgo.com/iu/?u=",
         "url: https://*.pythonanywhere.com/image.jpg?cmd=*"
+      ]
+    },
+    "Microsoft Graph": {
+      "descriptionUrl": "doc/graphapi.md",
+      "c2Projects": [
+        "https://github.com/RedSiege/GraphStrike",
+        "https://github.com/grantok/Excel-C2",
+        "https://github.com/boku7/azureOutlookC2",
+        "https://github.com/NTT-Security-Japan/pac2",
+        "https://github.com/looCiprian/GC2-sheet",
+        "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/OneDrive365RestFile.cpp",
+        "https://github.com/BC-SECURITY/Empire/blob/main/empire/server/listeners/onedrive.py"
+      ],
+      "detection": [
+        "url: https://graph.microsoft.com/beta/*metadata#chats",
+        "url: https://graph.microsoft.com/beta/*metadata#teams*/channels*/messages",
+        "url: https://graph.microsoft.com/v1.0/*metadata#chats*/members",
+        "url: https://graph.microsoft.com/v1.0/*metadata#teams*",
+        "url: https://graph.microsoft.com/v1.0/drives/*/items/*/workbook/worksheets",
+        "url: https://graph.microsoft.com/v1.0/users/*/drive/root:/*",
+        "url: https://graph.microsoft.com/v1.0/me/MailFolders/drafts/messages",
+        "url: https://graph.microsoft.com/v1.0/me/drive/items/*/content",
+        "url: https://graph.microsoft.com/v1.0/me/drive/root/children",
+        "url: https://graph.microsoft.com/v1.0/me/messages",
+        "url: https://graph.microsoft.com/v1.0/me",
+        "url: https://graph.microsoft.com/v1.0/me/chats",
+        "url: https://graph.microsoft.com/v1.0/sites/*/drive/items/*/content",
+        "url: https://graph.microsoft.com/v1.0/sites/*/drives",
+        "url: https://graph.microsoft.com/v1.0/sites/*/lists/*",
+        "url: https://graph.microsoft.com/v1.0/sites/*/lists/*/items/",
+        "url: https://graph.microsoft.com/v1.0/sites/root",
+        "url: https://login.microsoftonline.com/*/oauth2/v2.0/token",
+        "[graphstrike server] User-agent: Mozilla/6.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
       ]
     },
     "Microsoft outlook": {
@@ -345,7 +383,8 @@
     "Microsoft Sharepoint": {
       "descriptionUrl": "doc/sharepoint.md",
       "c2Projects": [
-        "https://github.com/looCiprian/GC2-sheet"
+        "https://github.com/looCiprian/GC2-sheet",
+        "https://github.com/RedSiege/GraphStrike"
       ],
       "detection": [
         "url: https://graph.microsoft.com/v1.0/sites/*/lists/*/items/",
