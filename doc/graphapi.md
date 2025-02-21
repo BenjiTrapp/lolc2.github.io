@@ -1,7 +1,5 @@
 ##### Abusing Microsoft Graph API for C2
 
-Adversaries can exploit the Microsoft Graph API to establish covert command-and-control (C2) channels by leveraging legitimate Microsoft 365 services such as OneDrive, SharePoint, Outlook, Teams, and Excel Online. By embedding malicious communications within these cloud applications, attackers can evade traditional security controls and persist within an enterprise environment. OneDrive and SharePoint are commonly used for staging payloads, fetching commands, and exfiltrating data by reading and writing tasking files within shared folders (https://graph.microsoft.com/v1.0/me/drive/root/children, https://graph.microsoft.com/v1.0/sites/*/drives).
-
 Adversaries can exploit the Microsoft Graph API `https://graph.microsoft.com` to establish covert command-and-control (C2) channels by leveraging legitimate Microsoft 365 services such as OneDrive, SharePoint, Outlook, Teams, and Excel Online. By embedding malicious communications within these cloud applications, attackers evade traditional security controls and persist within an enterprise environment.
 
 Reconnaissance activities include querying Azure AD to enumerate users, roles, and permissions before escalating access (`/me`).
