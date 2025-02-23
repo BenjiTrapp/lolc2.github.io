@@ -49,9 +49,28 @@
         "url: https://app.asana.com/api/1.0/sections/"
       ]
     },
+    "x": {
+      "descriptionUrl": "doc/x.md",
+      "c2Projects": [
+        "https://github.com/lolc2/XC2"
+      ],
+      "detection": [
+        "url: https://api.x.com/2/*",
+        "url: https://api.x.com/2/tweets",
+        "url: https://api.x.com/2/dm_conversations/with/*/messages",
+        "url: https://api.x.com/2/users/*/tweets",
+        "url: https://api.x.com/2/dm_conversations",
+        "url: https://api.x.com/2/users/me",
+        "url: https://api.x.com/2/lists",
+        "url: https://api.x.com/2/tweets/*",
+        "detection strategy: High-frequency GETs to /users/<id>/tweets or /dm_conversations",
+        "detection strategy: POSTs to /tweets or /dm_conversations/with/<id>/messages",
+        "detection strategy: PATCH requests to /users/me with structured bio updates."
+      ]
+    },
     "onedrive": {
       "descriptionUrl": "doc/onedrive.md",
-        "c2Projects": [
+      "c2Projects": [
         "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/OneDrive365RestFile.cpp",
         "https://github.com/BC-SECURITY/Empire/blob/main/empire/server/listeners/onedrive.py",
         "https://github.com/grantok/Excel-C2",

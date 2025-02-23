@@ -1,0 +1,2 @@
+#####  Abusing X for C2
+Attackers can leverage the new X API to send commands through tweets or DMs and exfiltrate data via replies, DMs, or bio updates, blending malicious traffic with legitimate social media activity. However, exploitation is less likely with the free tier, which restricts to GET requests for posts, preventing command issuance or data exfiltration without a paid plan!
