@@ -26,6 +26,24 @@
         "Source RCON protocol documentation: https://developer.valvesoftware.com/wiki/Source_RCON_Protocol"
       ]
     },
+    "Google Translate": {
+      "descriptionUrl": "doc/google_translate.md",
+      "c2Projects": [
+        "https://github.com/UnkL4b/BabyShark",
+        "https://github.com/mthbernardes/GTRS"
+      ],
+      "detection": [
+        "[BabyShark] User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
+        "[BabyShark] url: */momyshark?key=*",
+        "[BabyShark] file created: /tmp/input",
+        "[BabyShark] file created: /tmp/output",
+        "[BabyShark] detection blog: https://nasbench.medium.com/understanding-detecting-c2-frameworks-babyshark-641be4595845",
+        "url: https://translate.google.com/translate?&anno=2&u=*",
+        "url: https://*.translate.goog",
+        "High-frequency polling of a specific translated site",
+        "Base64 payloads in translated sites url"
+      ]
+    },
     "mastodon": {
       "descriptionUrl": "doc/mastodon.md",
       "c2Projects": [
