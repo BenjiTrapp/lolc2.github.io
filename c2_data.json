@@ -55,6 +55,22 @@
          "POST url: https://mastodon.be/api/v1/statuses"    
       ]
     },
+    "whatsapp": {
+      "descriptionUrl": "doc/whatsapp.md",
+      "c2Projects": [
+        "https://github.com/KarimJedda/whatsappcli"
+      ],
+      "detection": [
+        "HTTP - POST url: https://v.whatsapp.net/v2/register",
+        "HTTP - POST url: https://v.whatsapp.net/v2/exist",
+        "XMPP - connection and messaging routing: c.whatsapp.net - s.whatsapp.net - e1.whatsapp.net - e2.whatsapp.net - e3.whatsapp.net - e4.whatsapp.net - e5.whatsapp.net - e6.whatsapp.net - e7.whatsapp.net - e8.whatsapp.net - e9.whatsapp.net - e10.whatsapp.net - e11.whatsapp.net - e12.whatsapp.net - e13.whatsapp.net - e14.whatsapp.net - e15.whatsapp.net - e16.whatsapp.net",
+        "XMPP - Media server for image/file transfers: mms.whatsapp.net",
+        "Detection logic: Unusual XMPP traffic to c.whatsapp.net and eX.whatsapp.net from a non-mobile device",
+        "Detection logic: Unusual volume of inbound/outbound XMPP traffic",
+        "Detection logic: Excessive outbound media uploads to mms.whatsapp.net",
+        "Detection logic: Presence of Yowsup or whatsapp-web.js automation scripts on a system"
+      ]
+    },
     "asana": {
       "descriptionUrl": "doc/asana.md",
       "c2Projects": [
