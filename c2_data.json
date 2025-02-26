@@ -184,7 +184,8 @@
         "https://github.com/Yihsiwei/slack-c2-golang",
         "https://github.com/MythicC2Profiles/slack",
         "https://github.com/Cainor/Shlack-C2",
-        "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/Slack.cpp"
+        "https://github.com/WithSecureLabs/C3/blob/master/Src/Common/FSecure/C3/Interfaces/Channels/Slack.cpp",
+        "https://github.com/mthcht/StringHunter-triage/blob/main/_results_PeriscopeC2_/Periscope-main.7z"
       ],
       "detection": [
         "url: https://slack.com/api/*",
