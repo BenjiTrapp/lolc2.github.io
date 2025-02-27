@@ -71,6 +71,18 @@
         "Detection logic: Presence of Yowsup or whatsapp-web.js automation scripts on a system"
       ]
     },
+    "Microsoft Azure Application Proxy": {
+      "descriptionUrl": "doc/azure_application_proxy.md",
+      "c2Projects": [
+        "https://github.com/xpn/AppProxyC2"
+      ],
+      "detection": [
+        "url: https://*.msappproxy.net/*",
+        "url: https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2Fproxy.cloudwebappproxy.net%2Fregisterapp&client_id=*",
+        "[AppProxyC2] User-agent: ApplicationProxyConnector/1.5.1975.0",
+        "[AppProxyC2] User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:81.0) Gecko/20100101 Firefox/81.0"
+      ]
+    },
     "asana": {
       "descriptionUrl": "doc/asana.md",
       "c2Projects": [
