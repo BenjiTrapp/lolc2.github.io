@@ -72,6 +72,20 @@
         "Detection logic: Presence of Yowsup or whatsapp-web.js automation scripts on a system"
       ]
     },
+    "Microsoft Printer": {
+      "descriptionUrl": "doc/microsoft_printer.md",
+      "c2Projects": [
+        "https://github.com/Diverto/IPPrintC2"
+      ],
+      "detection": [
+        "detection strategy: unusual printer jobs name - base64 strings and long fragmented document names",
+        "detection strategy: unusual printer creation and jobs in Microsoft-Windows-PrintService/Operational logs",
+        "detection strategy: Microsoft-Windows-PrintService/Operational Event ID 300 for a printer with an external IP",
+        "detection strategy: repeated or scheduled polling of /printers/ endpoints from client machines",
+        "detection strategy: unusual process spawned from spoolsv.exe such as cmd.exe, powershell.exe, or wscript.exe",
+        "detection patterns: https://github.com/mthcht/ThreatHunting-Keywords/tree/main/tools/I-K/IPPrintC2.csv"
+      ]
+    },
     "Microsoft Azure Application Proxy": {
       "descriptionUrl": "doc/azure_application_proxy.md",
       "c2Projects": [
