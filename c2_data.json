@@ -146,6 +146,7 @@
         "url: https://api.onedrive.com/v1.0/shares/*/driveitem/content",
         "url: https://login.windows.net/organizations/oauth2/v2.0/token",
         "[empire] User-agent: Microsoft SkyDriveSync 17.005.0107.0008 ship; Windows NT 10.0 (16299)",
+        "[Graphstrike] file name: file name containing the string pD9-tK in O365 logs https://x.com/Octoberfest73/status/1896595415883292920",
         "[Excel-C2] User-agent: GoLang Client"
       ]
     },
