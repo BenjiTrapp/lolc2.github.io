@@ -27,6 +27,22 @@
         "Source RCON protocol documentation: https://developer.valvesoftware.com/wiki/Source_RCON_Protocol"
       ]
     },
+    "cloudflare": {
+      "descriptionUrl": "doc/cloudflare.md",
+      "c2Projects": [
+        "https://github.com/ChoiSG/CloudflarePagesRedirector",
+        "https://github.com/som3canadian/Cloudflare-Redirector",
+        "https://github.com/nickvourd/SkyFall-Pack"
+      ],
+      "detection": [
+        "Cloudflare Tunnels: *.cfargotunnel.com",
+        "Cloudflare Workers and Apps: https://*.*.workers.dev",
+        "Cloudflare DoH: https://cloudflare-dns.com/dns-query",
+        "blog: https://labs.jumpsec.com/putting-the-c2-in-c2loudflare/",
+        "comment: Keep an eye on DNS queries for subdomains of cfargotunnel.com and workers.dev that don't align with normal business operations",
+        "[CloudflarePagesRedirector] In this project the default user-agents strings ('ligoloua' & 'sliverua') serve as identifiers for implants to communicate with their respective backends"
+      ]
+    },
     "Google Translate": {
       "descriptionUrl": "doc/google_translate.md",
       "c2Projects": [
