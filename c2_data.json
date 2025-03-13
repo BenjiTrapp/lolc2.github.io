@@ -43,6 +43,18 @@
         "[CloudflarePagesRedirector] In this project the default user-agents strings ('ligoloua' & 'sliverua') serve as identifiers for implants to communicate with their respective backends"
       ]
     },
+    "Strava": {
+      "descriptionUrl": "doc/strava.md",
+      "c2Projects": [
+        "https://github.com/BongoKnight/ConceptC2"
+      ],
+      "detection": [
+        "url: http://www.strava.com/oauth/authorize?client_id=*",
+        "url: https://www.strava.com/oauth/token",
+        "url: POST & GET https://www.strava.com/api/v3/activities",
+        "url: PUT & GET https://www.strava.com/api/v3/activities/*"
+      ]
+    },
     "Google Translate": {
       "descriptionUrl": "doc/google_translate.md",
       "c2Projects": [
