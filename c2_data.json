@@ -369,7 +369,9 @@
       "descriptionUrl": "doc/azure_functions.md",
       "c2Projects": [
         "https://github.com/RedSiege/FunctionalC2",
-        "https://web.archive.org/web/20241203083420/https://fortynorthsecurity.com/blog/azure-functions-functional-redirection/",
+
+https://github.com/dmcxblue/AzureFunctionRedirector,
+      "https://web.archive.org/web/20241203083420/https://fortynorthsecurity.com/blog/azure-functions-functional-redirection/",
         "https://github.com/Flangvik/AzureC2Relay"
       ],
       "detection": [
