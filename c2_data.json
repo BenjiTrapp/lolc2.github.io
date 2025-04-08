@@ -532,6 +532,16 @@
       "url: https://www.googleapis.com/auth/calendar*"
     ]
   },
+  "google Slides": {
+    "descriptionUrl": "doc/google_slides.md",
+    "c2Projects": [
+      "https://github.com/MrSaighnal/GSR-Google-Slides-RAT"
+    ],
+    "detection": [
+      "GET - url: https://slides.googleapis.com/v1/presentations/*",
+      "POST - url: https://slides.googleapis.com/v1/presentations/*:batchUpdate"
+    ]
+  },
   "github": {
     "descriptionUrl": "doc/github.md",
     "c2Projects": [
