@@ -527,10 +527,16 @@
   "google Calendar": {
     "descriptionUrl": "doc/google_calendar.md",
     "c2Projects": [
-      "https://github.com/MrSaighnal/GCR-Google-Calendar-RAT"
+      "https://github.com/MrSaighnal/GCR-Google-Calendar-RAT",
+      "https://cloud.google.com/blog/topics/threat-intelligence/apt41-innovative-tactics"
     ],
     "detection": [
-      "url: https://www.googleapis.com/auth/calendar*"
+      "url: https://www.googleapis.com/auth/calendar*",
+      "GET - url:  https://www.googleapis.com/calendar/v3/calendars/*/events*",
+      "POST - url: https://www.googleapis.com/calendar/v3/calendars/*/events*",
+      "User-Agent - contains suspicious tooling (e.g. Python, curl, Go-http-client) targeting calendar.googleapis.com",
+      "Process - python.exe making direct outbound connection to calendar.googleapis.com",
+      "Process - rare binary name contacting *.googleapis.com with calendar/v3 path"
     ]
   },
   "google Slides": {

@@ -4,6 +4,6 @@ Operators can embed commands in event descriptions or notes, checking calendar e
 
 ![google calendar](doc/google_calendar.png)
 
-![google calendar apt41 sample](google_calendar_apt41_example.png)
+![google calendar apt41 sample](doc/google_calendar_apt41_example.png)
 
-![google calendar apt41 sample 2](google_calendar_campaign.jpg)
+![google calendar apt41 sample 2](doc/google_calendar_campaign.jpg)
